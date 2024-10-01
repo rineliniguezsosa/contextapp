@@ -1,12 +1,11 @@
 import React from 'react';
-import { View,Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { BottomTabNavigator } from './Navigators/BottomTabNavigator';
 
 export const Main = () => {
   return (
-    <View>
-        <Text>Main</Text>
-    </View>
+    <NavigationContainer>
+        <BottomTabNavigator/>
+    </NavigationContainer>
   );
 };
-
-
