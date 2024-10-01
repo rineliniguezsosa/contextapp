@@ -14,7 +14,7 @@ export const ProfileScreen = () => {
         <Text>Change state</Text>
       </Pressable>
 
-      <Pressable onPress={()=> handleChangleProfile('name cambiado','email cambiado') }>
+      <Pressable onPress={()=> handleChangleProfile('name cambiado otra vez','email cambiado') }>
         <Text>Change state</Text>
       </Pressable>
     </View>
