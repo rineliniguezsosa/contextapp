@@ -6,7 +6,7 @@ export interface SettingScreen {
     handleIncrementBy:(value:number) => void
 }
 
-export const useProfileStore = create<SettingScreen>()((set,get)=>({
+export const useSettingStore = create<SettingScreen>()((set,get)=>({
     count:0,
     handleIncrementBy:(value)=> set((state) => ({count:state.count + value})),
 }));
