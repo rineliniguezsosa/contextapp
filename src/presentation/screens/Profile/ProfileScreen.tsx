@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,Text } from 'react-native';
+import { View,Text,Pressable } from 'react-native';
 import { useProfileStore } from '../../../store/profile.store';
 
 export const ProfileScreen = () => {
@@ -8,6 +8,10 @@ export const ProfileScreen = () => {
   return (
     <View>
       <Text>Hola, {name} con el email: {email}</Text>
+
+      <Pressable onPress={()=> useProfileStore.setState({name:'name cambiado',email:'email cambiado'})}>
+        <Text>Change state</Text>
+      </Pressable>
     </View>
   );
 };
