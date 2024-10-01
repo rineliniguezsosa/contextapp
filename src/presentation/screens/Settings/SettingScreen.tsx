@@ -3,6 +3,7 @@ import React,{ useEffect } from 'react';
 import { View,Text,Pressable } from 'react-native';
 import { useSettingStore } from '../../../store/counter.store';
 import { useNavigation } from '@react-navigation/native';
+import { globalStyles } from '../../../styles/theme';
 
 export const SettingScreen = () => {
     const count = useSettingStore(state => state.count);
@@ -17,12 +18,12 @@ export const SettingScreen = () => {
     },[]);
 
   return (
-    <View>
-      <Text>SettingScreen</Text>
+    <View style={globalStyles.container}>
+     <Text style={globalStyles.title}>SettingScreen</Text>
 
-     <Text>{count}</Text>
+     <Text style={globalStyles.title}>{count}</Text>
 
-      <Pressable onPress={()=> handleIncrementBy(1) }>
+      <Pressable style={globalStyles.primaryButton} onPress={()=> handleIncrementBy(1) }>
         <Text>Increment +1</Text>
       </Pressable>
     </View>
